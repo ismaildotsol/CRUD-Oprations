@@ -1,4 +1,3 @@
-// /api/user/add-user
 import { PrismaClient} from '@prisma/client';
 import { NextResponse } from 'next/server';
 const prisma = new PrismaClient();
@@ -18,5 +17,5 @@ export async function POST(request) {
     console.log('user created:', user);
 
     
-    return NextResponse.json({ body });
+    return NextResponse.json({ user });
 }
